@@ -333,50 +333,12 @@ const Auth = () => {
                 required
               />
               <button
-  type="button"
-  onClick={() => setShowPassword(!showPassword)}
-  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 rounded p-1 transition-colors"
-  aria-label={showPassword ? 'Hide password' : 'Show password'}
->
-  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-</button>
-            </div>
-
-            {!isLogin && formData.password && (
-              <div className="mt-2">
-                <p className="text-sm text-gray-600">
-                  Password Strength:
-                  <span
-                    className={`ml-2 font-semibold ${
-                      passwordStrength === 'Weak'
-                        ? 'text-red-400'
-                        : passwordStrength === 'Medium'
-                        ? 'text-yellow-400'
-                        : 'text-green-400'
-                    }`}
-                  >
-                    {passwordStrength}
-                  </span>
-                </p>
-              </div>
-            )}
-
-            {fieldErrors.password && (
-              <p id="password-error" role="alert" className="text-red-600 text-sm mt-2">
-                {fieldErrors.password}
-              </p>
-            )}
-          </div>
-
-          {isLogin && (
-            <div className="flex justify-end -mt-2">
-              <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500 rounded p-1 transition-colors"
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
-                Forgot Password?
+                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
               </button>
             </div>
 
