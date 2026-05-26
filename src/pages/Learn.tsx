@@ -71,7 +71,11 @@ const ResourceCard: React.FC<{
   const points = content.points ?? 0;
 
   return (
+<<<<<<< HEAD
     <motion.div whileHover={{ y: -4, scale: 1.01 }} className="overflow-hidden rounded-2xl border border-eco-border bg-eco-panel">
+=======
+    <motion.div whileHover={{ y: -4, scale: 1.01 }} className="overflow-hidden rounded-2xl border border-white/40 bg-white/20">
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
       <div className="relative">
         <img
           src={content.thumbnail}
@@ -90,7 +94,11 @@ const ResourceCard: React.FC<{
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="flex flex-col gap-2 rounded-b-2xl border-t border-eco-border p-4">
+=======
+      <div className="flex flex-col gap-2 rounded-b-2xl border-t border-white/30 p-4">
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
         <div className="flex items-start justify-between gap-3">
           <p className="text-xs font-semibold uppercase tracking-wide text-eco-accent">
             {categoryLabels[content.category] ?? content.category}
@@ -100,6 +108,7 @@ const ResourceCard: React.FC<{
           </span>
         </div>
 
+<<<<<<< HEAD
         <h3 className="overflow-hidden text-base font-semibold leading-snug text-eco-text line-clamp-2">
           {content.title}
         </h3>
@@ -109,6 +118,17 @@ const ResourceCard: React.FC<{
         </p>
 
         <div className="flex items-center gap-3 text-xs text-eco-muted">
+=======
+        <h3 className="overflow-hidden text-base font-semibold leading-snug text-white line-clamp-2">
+          {content.title}
+        </h3>
+
+        <p className="overflow-hidden text-sm leading-relaxed text-gray-600 line-clamp-3">
+          {content.description}
+        </p>
+
+        <div className="flex items-center gap-3 text-xs text-gray-500">
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
           <span className="inline-flex items-center gap-1.5">
             <Clock className="h-3.5 w-3.5" />
             {content.duration}
@@ -170,6 +190,7 @@ const Learn = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-4 sm:p-6 lg:p-8">
+<<<<<<< HEAD
       <div className="mb-8 overflow-hidden rounded-3xl border border-eco-border bg-eco-surface bg-gradient-to-br from-eco-accent/10 to-transparent px-6 py-8 sm:px-8 lg:px-10">
         <h1 className="text-4xl font-bold text-eco-text">Explore & Learn</h1>
         <p className="mt-3 text-lg text-eco-muted">Discover sustainability topics at your own pace</p>
@@ -184,13 +205,33 @@ const Learn = () => {
             <span>6 Categories</span>
           </div>
           <div className="inline-flex items-center gap-2 rounded-full border border-eco-border bg-eco-panel px-4 py-1.5 text-sm text-eco-muted">
+=======
+      <div className="mb-8 overflow-hidden rounded-3xl border border-eco-border bg-white/20 bg-gradient-to-br from-eco-accent/10 to-transparent px-6 py-8 sm:px-8 lg:px-10">
+        <h1 className="text-4xl font-bold text-eco-accent">Explore & Learn</h1>
+        <p className=" mt-3 text-lg text-gray-600">Discover sustainability topics at your own pace</p>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-sm text-gray-600">
+            <BookOpen className="h-3.5 w-3.5 text-eco-accent" />
+            <span>15 Resources</span>
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-sm text-gray-600">
+            <LayoutGrid className="h-3.5 w-3.5 text-eco-accent" />
+            <span>6 Categories</span>
+          </div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-sm text-gray-600">
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
             <Star className="h-3.5 w-3.5 text-eco-accent" />
             <span>Earn Points</span>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="sticky top-20 z-10 mb-8 rounded-2xl border border-eco-border bg-eco-surface/95 p-4 shadow-md backdrop-blur-md">
+=======
+      <div className="sticky top-20 z-10 mb-8 rounded-2xl border border-eco-border bg-white/20 backdrop-blur-sm p-4 shadow-sm backdrop-blur-md">
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
           <div className="w-full lg:max-w-md">
             <label className="sr-only" htmlFor="resource-search">
@@ -204,13 +245,21 @@ const Learn = () => {
                 placeholder="Search resources..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                 className="w-full rounded-xl border border-eco-border bg-eco-panel py-3 pl-10 pr-10 text-eco-text placeholder:text-eco-muted focus:outline-none focus:ring-2 focus:ring-eco-accent/40"
+=======
+                className="w-full rounded-xl border border-eco-border bg-white/20 py-3 pl-10 pr-10 text-gray-800 placeholder:text-eco-muted focus:outline-none focus:ring-2 focus:ring-eco-accent/40"
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
               />
               {searchTerm && (
                 <button
                   type="button"
                   onClick={() => setSearchTerm('')}
+<<<<<<< HEAD
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-eco-muted transition-colors hover:text-eco-text"
+=======
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-eco-muted transition-colors hover:text-gray-800"
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
                   aria-label="Clear search"
                 >
                   <X className="h-4 w-4" />
@@ -233,7 +282,11 @@ const Learn = () => {
                   className={`whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                     selectedCategory === chip.key
                       ? 'bg-eco-accent text-white'
+<<<<<<< HEAD
                       : 'border border-eco-border bg-eco-panel text-eco-muted hover:border-eco-accent'
+=======
+                      : 'border border-white/40 bg-white/20 text-gray-600 hover:border-eco-accent'
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
                   }`}
                 >
                   {chip.emoji ? `${chip.emoji} ` : ''}
@@ -257,7 +310,11 @@ const Learn = () => {
                   className={`whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                     selectedType === chip.key
                       ? 'bg-eco-accent text-white'
+<<<<<<< HEAD
                       : 'border border-eco-border bg-eco-panel text-eco-muted hover:border-eco-accent'
+=======
+                      : 'border border-white/40 bg-white/20 text-gray-600 hover:border-eco-accent'
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
                   }`}
                 >
                   {chip.emoji ? `${chip.emoji} ` : ''}
@@ -269,7 +326,11 @@ const Learn = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="mb-4 text-sm text-eco-muted">
+=======
+      <div className="mb-4 text-sm text-gray-500">
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
         Showing {filteredContent.length} of {learningContent.length} resources
       </div>
 
@@ -284,7 +345,11 @@ const Learn = () => {
               className="flex min-h-[320px] flex-col items-center justify-center rounded-3xl border border-eco-border bg-eco-surface px-6 py-12 text-center"
             >
               <div className="text-5xl">🔍</div>
+<<<<<<< HEAD
               <h2 className="mt-4 text-2xl font-bold text-eco-text">No resources found</h2>
+=======
+              <h2 className="mt-4 text-2xl font-bold text-gray-800">No resources found</h2>
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
               <p className="mt-2 text-eco-muted">Try adjusting your search or filters</p>
               <button
                 type="button"

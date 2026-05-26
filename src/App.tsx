@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ConfigErrorScreen from './components/status/ConfigErrorScreen';
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -77,11 +77,14 @@ const AppRoutes = () => {
   };
 
 export default function App() {
+<<<<<<< HEAD
   const envStatus = validateEnv();
 
   if (!envStatus.valid) {
     return <ConfigErrorScreen missing={envStatus.missing} />;
   }
+=======
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
 
   
 

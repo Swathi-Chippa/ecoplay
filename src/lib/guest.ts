@@ -41,6 +41,7 @@ export function clearGuestState(): void {
     // ignore storage failures
   }
 }
+<<<<<<< HEAD
 export function getGuestId(): string {
   try {
     const existing = localStorage.getItem('ecoplay.guest_id');
@@ -53,3 +54,5 @@ export function getGuestId(): string {
   }
 }
 
+=======
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe

@@ -1,7 +1,11 @@
 import type { ReactNode } from "react";
+<<<<<<< HEAD
 import { render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
+=======
+import { afterEach, describe, expect, it, vi } from "vitest";
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
 
 vi.mock("./context/AuthContext", () => ({
   AuthProvider: ({ children }: { children: ReactNode }) => children,
@@ -38,6 +42,7 @@ describe("App blank screen regression", () => {
     vi.unstubAllEnvs();
   });
 
+<<<<<<< HEAD
   it("shows the configuration screen when Supabase env vars are placeholders", () => {
     vi.stubEnv("VITE_SUPABASE_URL", "https://your-project.supabase.co");
     vi.stubEnv("VITE_SUPABASE_ANON_KEY", "your-anon-key");
@@ -47,5 +52,9 @@ describe("App blank screen regression", () => {
     expect(screen.getByText("Configuration Error")).toBeInTheDocument();
     expect(screen.queryByText("Landing Page")).not.toBeInTheDocument();
     expect(screen.queryByText("Auth Page")).not.toBeInTheDocument();
+=======
+  it("renders without crashing", () => {
+    expect(true).toBe(true);
+>>>>>>> 0c69beec0f426888f135a46b565d4e2e3408f3fe
   });
 });
